@@ -126,5 +126,3 @@ On macOS / Linux (in Bash/Zsh):
 rm -rf .venv
 3. Recreate and Reinstall (Follow Setup Instructions):
 Now, go back to the "Setup Instructions" section above and start from Step 2 (Create a Virtual Environment). This will ensure a clean virtual environment is created and all dependencies are installed correctly within it.
-
-"If you face any issues, Final option 'GEMINI' - https://g.co/gemini/share/a92867bd1e8e"
