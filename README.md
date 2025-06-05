@@ -174,7 +174,9 @@ pip install google-generativeai
 ```
 ### 3. Modifying your LLM initialization:
 
-backend/service.py might change:
+You'll replace the Azure OpenAI client setup with the Gemini client setup.
+
+Example of how your backend/service.py (or similar LLM interaction file) might change:
 ```
 # Before (Azure OpenAI example)
 # from openai import AzureOpenAI
