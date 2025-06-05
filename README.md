@@ -50,23 +50,23 @@ Follow these steps to set up the project on your local machine.
 
 Open your terminal or command prompt and change your directory to the `ai_resume_analyzer` folder. If you're using PyCharm, you can open a terminal directly within PyCharm (usually at the bottom of the window, named "Terminal") which will automatically be in your project root.
 
-```bash
+*COPY CODE*
 cd "copy paste the location where the file 'ai_resume_analyzer' is located. Ex,. cd C:\Users\albert.j\PyCharmMiscProject\ai_resume_analyzer"
 2. Create a Virtual Environment
 It's highly recommended to use a virtual environment to manage dependencies.
 
-Bash
+*COPY CODE*
 
 python -m venv .venv
 3. Activate the Virtual Environment
 On Windows (Command Prompt/PowerShell):
 
-Bash
+*COPY CODE*
 
 .venv\Scripts\activate
 On macOS / Linux (Bash/Zsh):
 
-Bash
+*COPY CODE*
 
 source .venv/bin/activate
 (You should see (.venv) or similar in your terminal prompt, indicating the environment is active.)
@@ -74,7 +74,7 @@ source .venv/bin/activate
 4. Install Dependencies
 Install all required Python packages using pip:
 
-Bash
+*COPY CODE*
 
 pip install -r requirements.txt
 Running the Application
@@ -83,7 +83,7 @@ The application consists of two main parts: the FastAPI backend and the Streamli
 1. Start the FastAPI Backend
 Open your first terminal or command prompt (or a PyCharm terminal tab), navigate to the project root (if not already there), and ensure your virtual environment is activated. Then run:
 
-Bash
+*COPY CODE*
 
 uvicorn backend.main:app --reload --port 8000
 Keep this terminal open and running.
@@ -91,7 +91,7 @@ Keep this terminal open and running.
 2. Start the Streamlit Frontend
 Open your second terminal or command prompt (or another PyCharm terminal tab), navigate to the project root (if not already there), and ensure your virtual environment is activated. Then run:
 
-Bash
+*COPY CODE*
 
 streamlit run streamlit_app/app.py
 Once both servers are running, your Streamlit application should automatically open in your web browser (usually http://localhost:8501), and you can start using all the functionalities (AI detection, resume/JD analysis, interview analysis, and Q&A).
@@ -99,7 +99,7 @@ Once both servers are running, your Streamlit application should automatically o
 Deactivating the Virtual Environment
 When you are done working on the project, you can deactivate your virtual environment in both terminals:
 
-Bash
+*COPY CODE*
 
 deactivate
 Troubleshooting: If the Virtual Environment (or Frontend) Doesn't Work
@@ -108,7 +108,7 @@ If you encounter issues like "unable to find the parent folder" or other errors 
 1. Deactivate Existing Environment (if active):
 In your terminal, run:
 
-Bash
+*COPY CODE*
 
 deactivate
 2. Delete the Corrupted Virtual Environment:
@@ -116,12 +116,12 @@ Manually delete the entire .venv folder from your ai_resume_analyzer directory.
 
 On Windows (in Command Prompt/PowerShell):
 
-Bash
+*COPY CODE*
 
 rmdir /s /q .venv
 On macOS / Linux (in Bash/Zsh):
 
-Bash
+*COPY CODE*
 
 rm -rf .venv
 3. Recreate and Reinstall (Follow Setup Instructions):
