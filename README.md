@@ -149,3 +149,61 @@ rm -rf .venv
 Now, go back to the "Setup Instructions" section above and start from Step 2 (Create a Virtual Environment). This will ensure a clean virtual environment is created and all dependencies are installed correctly within it.
 
 --
+
+## If you are using diffrent API such as Gemini API:
+
+### 1. Modify the .env file:
+
+You do NOT need to mention anything for AZURE_OPENAI_ENDPOINT, AZURE_DEPLOYMENT_NAME, or AZURE_OPENAI_API_VERSION if you are using Google Gemini. These variables are specific to Azure OpenAI. You can safely remove or comment them out from your .env file.
+
+Your .env file should primarily contain your Gemini API Key.
+
+backend/.env (example):
+```
+GEMINI_API_KEY="YOUR_GOOGLE_GEMINI_API_KEY_HERE"
+# Remove or comment out Azure-specific variables
+# AZURE_OPENAI_ENDPOINT="YOUR_AZURE_ENDPOINT"
+# AZURE_DEPLOYMENT_NAME="YOUR_DEPLOYMENT_NAME"
+# AZURE_OPENAI_API_VERSION="YOUR_API_VERSION"
+```
+### 2. What You NEED to Do in Your Code:
+
+Installing the Google Gemini Python SDK:
+```
+pip install google-generativeai
+```
+### 3. Modifying your LLM initialization:
+
+backend/service.py might change:
+```
+# Before (Azure OpenAI example)
+# from openai import AzureOpenAI
+# client = AzureOpenAI(
+#     azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
+#     api_key=os.getenv("AZURE_OPENAI_API_KEY"), # Assuming you had an Azure API Key variable
+#     api_version=os.getenv("AZURE_OPENAI_API_VERSION")
+# )
+# ... then use client.chat.completions.create(...)
+
+# AFTER (Google Gemini API)
+import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+
+load_dotenv(dotenv_path='backend/.env') # Ensure you load environment variables
+
+# Configure the Gemini API with your key
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
+# Function to get LLM response (example)
+def get_gemini_response(prompt: str):
+    try:
+        model = genai.GenerativeModel('gemini-pro') # Or 'gemini-1.5-flash' for faster, cheaper
+        response = model.generate_content(prompt)
+        return response.text
+    except Exception as e:
+        print(f"Error calling Gemini API: {e}")
+        return "An error occurred while getting an AI response."
+
+# Now, whenever you need an LLM response, call get_gemini_response(your_prompt)
+```
