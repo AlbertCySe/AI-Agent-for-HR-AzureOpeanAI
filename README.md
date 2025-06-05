@@ -31,7 +31,7 @@ ai_resume_analyzer/
 │   ├── modules/
 │   │   ├── __init__.py        # Python package marker (MUST BE PRESENT AND EMPTY)
 │   │   └── pdf_extractor.py   # PDF text extraction utility
-│   └── .env                   # Environment variables (e.g., API keys, deployment names)
+│   └── credit.env             # Environment variables, rename the file as "credit.env" (e.g., API keys, deployment names)
 ├── streamlit_app/
 │   ├── __init__.py            # Python package marker (CRITICAL! MUST BE PRESENT AND EMPTY)
 │   ├── app.py                 # Streamlit application entry point
