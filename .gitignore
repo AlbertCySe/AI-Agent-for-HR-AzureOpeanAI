@@ -1,0 +1,14 @@
+*.env
+*.eml
+.venv/
+__pycache__/
+*.pyc
+logs/
+*.log
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store
+*.tmp
+*.swp

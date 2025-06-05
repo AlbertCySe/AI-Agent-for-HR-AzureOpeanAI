@@ -1,0 +1,4 @@
+AZURE_OPENAI_KEY=abc
+AZURE_OPENAI_ENDPOINT=https://abc.openai.azure.com/
+AZURE_DEPLOYMENT_NAME=abc-gpt-4o-mini
+AZURE_OPENAI_API_VERSION=2024-05-01-preview
