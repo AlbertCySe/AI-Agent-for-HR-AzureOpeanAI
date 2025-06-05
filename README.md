@@ -52,7 +52,6 @@ Follow these steps to set up the project on your local machine.
 
 Open your terminal or command prompt and change your directory to the `ai_resume_analyzer` folder. If you're using PyCharm, you can open a terminal directly within PyCharm (usually at the bottom of the window, named "Terminal") which will automatically be in your project root.
 
-*COPY CODE*
 ```
 cd "copy paste the location where the file 'ai_resume_analyzer' is located. Ex,. cd C:\Users\albert.j\PyCharmMiscProject\ai_resume_analyzer"
 ```
@@ -61,7 +60,6 @@ cd "copy paste the location where the file 'ai_resume_analyzer' is located. Ex,.
 
 It's highly recommended to use a virtual environment to manage dependencies.
 
-*COPY CODE*
 ```
 python -m venv .venv
 ```
@@ -70,14 +68,12 @@ python -m venv .venv
 
 On Windows (Command Prompt/PowerShell):
 
-*COPY CODE*
 ```
 .venv\Scripts\activate
 ```
 
 On macOS / Linux (Bash/Zsh):
 
-*COPY CODE*
 ```
 source .venv/bin/activate
 ```
@@ -88,7 +84,6 @@ source .venv/bin/activate
 
 Install all required Python packages using pip:
 
-*COPY CODE*
 ```
 pip install -r requirements.txt
 ```
@@ -99,7 +94,6 @@ The application consists of two main parts: the FastAPI backend and the Streamli
 1. Start the FastAPI Backend
 Open your first terminal or command prompt (or a PyCharm terminal tab), navigate to the project root (if not already there), and ensure your virtual environment is activated. Then run:
 
-*COPY CODE*
 ```
 uvicorn backend.main:app --reload --port 8000
 ```
@@ -109,7 +103,6 @@ Keep this terminal open and running.
 2. Start the Streamlit Frontend
 Open your second terminal or command prompt (or another PyCharm terminal tab), navigate to the project root (if not already there), and ensure your virtual environment is activated. Then run:
 
-*COPY CODE*
 ```
 streamlit run streamlit_app/app.py
 ```
@@ -119,7 +112,6 @@ Once both servers are running, your Streamlit application should automatically o
 Deactivating the Virtual Environment
 When you are done working on the project, you can deactivate your virtual environment in both terminals:
 
-*COPY CODE*
 ```
 deactivate
 ```
@@ -132,7 +124,6 @@ If you encounter issues like "unable to find the parent folder" or other errors 
    
 In your terminal, run:
 
-*COPY CODE*
 ```
 deactivate
 ```
@@ -143,14 +134,12 @@ Manually delete the entire .venv folder from your ai_resume_analyzer directory.
 
 On Windows (in Command Prompt/PowerShell):
 
-*COPY CODE*
 ```
 rmdir /s /q .venv
 ```
 
 On macOS / Linux (in Bash/Zsh):
 
-*COPY CODE*
 ```
 rm -rf .venv
 ```
@@ -160,5 +149,3 @@ rm -rf .venv
 Now, go back to the "Setup Instructions" section above and start from Step 2 (Create a Virtual Environment). This will ensure a clean virtual environment is created and all dependencies are installed correctly within it.
 
 --
-
-
