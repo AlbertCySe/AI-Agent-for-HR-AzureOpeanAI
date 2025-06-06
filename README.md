@@ -53,7 +53,7 @@ Follow these steps to set up the project on your local machine.
 Open your terminal or command prompt and change your directory to the `ai_resume_analyzer` folder. If you're using PyCharm, you can open a terminal directly within PyCharm (usually at the bottom of the window, named "Terminal") which will automatically be in your project root.
 
 ```
-cd "copy paste the location where the file 'ai_resume_analyzer' is located. Ex,. cd C:\Users\albert.j\PyCharmMiscProject\ai_resume_analyzer"
+cd "copy paste the location where the file 'ai_resume_analyzer' is located. Ex,. cd C:\Users\abc\PyCharmMiscProject\ai_resume_analyzer"
 ```
 
 ### 2. Create a Virtual Environment
